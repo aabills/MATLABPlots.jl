@@ -84,23 +84,23 @@ function loglog(x,y,lineSpec::String;options::Dict)
 end
 
 #https://www.mathworks.com/help/matlab/ref/stairs.html
-function loglog(y;options=Dict())
+function stairs(y;options=Dict())
     MATLAB.@mput y
     optionsString = namevaluepairs(options)
-    MATLAB.eval_string("loglog(y"*optionsString*")")
+    MATLAB.eval_string("stairs(y"*optionsString*")")
 end
 
-function loglog(x,y;options=Dict())
+function stairs(x,y;options=Dict())
     MATLAB.@mput x
     MATLAB.@mput y
     optionsString = namevaluepairs(options)
-    MATLAB.eval_string("loglog(x,y"*",\"$lineSpec\""*optionsString*")")
+    MATLAB.eval_string("stairs(x,y"*",\"$lineSpec\""*optionsString*")")
 end
 
-function loglog(x,y,lineSpec::String;options::Dict)
+function stairs(x,y,lineSpec::String;options::Dict)
     MATLAB.@mput x
     MATLAB.@mput y
     optionsString = namevaluepairs(options)
-    MATLAB.eval_string("loglog(x,y"*",\"$lineSpec\""*optionsString*")")
+    MATLAB.eval_string("stairs(x,y"*",\"$lineSpec\""*optionsString*")")
 end
 
