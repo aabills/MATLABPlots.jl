@@ -33,6 +33,10 @@ export plot3,surf,contourf,contour
 include("StatisticalMatlabPlotting.jl")
 export histogram
 
+#Geo Plotting
+include("GeoPlots.jl")
+export geoplot
+
 #Legends, Axis Labels, GCA
 include("Style.jl")
 export xlabel,ylabel,zlabel,title,legend,setgca
