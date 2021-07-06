@@ -17,11 +17,22 @@ function plot3(x,y,z;options=Dict())
 end
 
 #TODO: Improve 3D Plotting
-function surf(X,Y,Z)
+function surf(X,Y,Z;options=Dict())
     MATLAB.@mput X
     MATLAB.@mput Y
     MATLAB.@mput Z
-    MATLAB.eval_string("surf(X,Y,Z)")
+    optionsString = namevaluepairs(options)
+    plotString = "surf(X,Y,Z"*optionsString*")"
+    MATLAB.eval_string(plotString)
+end
+
+function surf(X,Y,Z,linespec;options=Dict())
+    MATLAB.@mput X
+    MATLAB.@mput Y
+    MATLAB.@mput Z
+    optionsString = namevaluepairs(options)
+    plotString = "surf(X,Y,Z"*",\"$lineSpec\""*optionsString*")"
+    MATLAB.eval_string(plotString)
 end
 
 function contourf(X::Array{T,2},Y::Array{T,2},Z::Array{T,2}) where {T}
