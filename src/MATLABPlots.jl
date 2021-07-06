@@ -27,7 +27,7 @@ export plot,semilogx,loglog,semilogy,stairs
 
 #(3D) Plotting
 include("3DMatlabPlots.jl")
-export plot3,surf,contourf,contour
+export plot3,surf,contourf,contour,surface
 
 #(Statistical) Plotting
 include("StatisticalMatlabPlotting.jl")
