@@ -26,7 +26,7 @@ function surf(X,Y,Z;options=Dict())
     MATLAB.eval_string(plotString)
 end
 
-function surf(X,Y,Z,linespec;options=Dict())
+function surf(X,Y,Z,lineSpec;options=Dict())
     MATLAB.@mput X
     MATLAB.@mput Y
     MATLAB.@mput Z
@@ -44,7 +44,7 @@ function surface(X,Y,Z;options=Dict())
     MATLAB.eval_string(plotString)
 end
 
-function surface(X,Y,Z,linespec;options=Dict())
+function surface(X,Y,Z,lineSpec;options=Dict())
     MATLAB.@mput X
     MATLAB.@mput Y
     MATLAB.@mput Z
@@ -53,11 +53,22 @@ function surface(X,Y,Z,linespec;options=Dict())
     MATLAB.eval_string(plotString)
 end
 
-function contourf(X::Array{T,2},Y::Array{T,2},Z::Array{T,2}) where {T}
+function contourf(X,Y,Z;options=Dict())
     MATLAB.@mput X
     MATLAB.@mput Y
     MATLAB.@mput Z
-    MATLAB.eval_string("contourf(X,Y,Z)")
+    optionsString = namevaluepairs(options)
+    plotString = "contourf(X,Y,Z"*optionsString*")"
+    MATLAB.eval_string(plotString)
+end
+
+function contourf(X,Y,Z,lineSpec;options=Dict())
+    MATLAB.@mput X
+    MATLAB.@mput Y
+    MATLAB.@mput Z
+    optionsString = namevaluepairs(options)
+    plotString = "contourf(X,Y,Z"*",\"$lineSpec\""*optionsString*")"
+    MATLAB.eval_string(plotString)
 end
 
 function contour(X::Array{T,2},Y::Array{T,2},Z::Array{T,2}) where {T}
