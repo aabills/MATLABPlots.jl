@@ -25,6 +25,10 @@ include("utils.jl")
 include("2DMatlabPlots.jl")
 export plot,semilogx,loglog,semilogy,stairs
 
+#Timeseries
+using Dates
+include("timeseries.jl")
+
 #(3D) Plotting
 include("3DMatlabPlots.jl")
 export plot3,surf,contourf,contour,surface

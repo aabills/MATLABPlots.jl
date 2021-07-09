@@ -5,14 +5,14 @@ function plot(y;options=Dict())
     MATLAB.eval_string("plot(y"*optionsString*")")
 end
 
-function plot(x,y;options=Dict())
+function plot(x::Array{T},y;options=Dict()) where T<:Real
     MATLAB.@mput x
     MATLAB.@mput y
     optionsString = namevaluepairs(options)
     MATLAB.eval_string("plot(x,y"*optionsString*")")
 end
 
-function plot(x,y,lineSpec::String;options=Dict())
+function plot(x::Array{T},y,lineSpec::String;options=Dict()) where T<:Real
     MATLAB.@mput x
     MATLAB.@mput y
     optionsString = namevaluepairs(options)
