@@ -28,3 +28,15 @@ function setgca(options::Dict)
     optionString = namevaluepairs(options)
     MATLAB.eval_string("set(gca $optionString)")
 end
+
+function setgcf(options::Dict)
+    optionString = namevaluepairs(options)
+    MATLAB.eval_string("set(gca $optionString)")
+end
+
+function printgcf(kwargs...)
+    str = ""
+    ops = unroll_kwargs(kwargs)
+    MATLAB.eval_string("print(gcf $ops)")
+
+end

@@ -3,7 +3,6 @@ module MATLABPlots
 import MATLAB
 
 #Basic One Liners
-#TODO: SAVE
 figure(n::Int) = MATLAB.eval_string("figure($n)")
 figure() = MATLAB.eval_string("figure()")
 function hold_on()
@@ -12,10 +11,13 @@ end
 function hold_off()
     MATLAB.mat"hold off"
 end
+function grid_on()
+    MATLAB.mat"grid on"
+end
 clf(n::Int) = MATLAB.eval_string("clf($n)")
 clf() = MATLAB.eval_string("clf()")
 subplot(a,b,c) = MATLAB.eval_string("subplot($a,$b,$c)")
-export figure,clf,hold_on,hold_off,subplot
+export figure,clf,hold_on,hold_off,subplot,grid_on
 
 
 #Utilities for Plotting
@@ -43,7 +45,7 @@ export geoplot
 
 #Legends, Axis Labels, GCA
 include("Style.jl")
-export xlabel,ylabel,zlabel,title,legend,setgca
+export xlabel,ylabel,zlabel,title,legend,setgca,setgcf,printgcf
 
 
 # Saving Plots

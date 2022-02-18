@@ -21,3 +21,12 @@ function namevaluepairs(options)
     end
     return optionsString
 end
+
+#Unrolls the dictionary to form name-value pairs of the form 
+function unroll_kwargs(kwarg_tuple)
+    optionsString=""
+    for arg in kwarg_tuple
+        optionsString *= ",\"$arg\""
+    end
+    return optionsString
+end
