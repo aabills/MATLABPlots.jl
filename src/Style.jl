@@ -38,5 +38,4 @@ function printgcf(kwargs...)
     str = ""
     ops = unroll_kwargs(kwargs)
     MATLAB.eval_string("print(gcf $ops)")
-
 end
