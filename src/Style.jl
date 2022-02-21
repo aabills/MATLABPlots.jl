@@ -39,3 +39,11 @@ function printgcf(kwargs...)
     ops = unroll_kwargs(kwargs)
     MATLAB.eval_string("print(gcf $ops)")
 end
+
+function xlim(vec)
+    MATLAB.eval_string("xlim($vec)")
+end
+
+function ylim(vec)
+    MATLAB.eval_string("ylim($vec")
+end
