@@ -45,7 +45,7 @@ function xlim(vec)
 end
 
 function ylim(vec)
-    MATLAB.eval_string("ylim($vec")
+    MATLAB.eval_string("ylim($vec)")
 end
 
 function axes(;options=Dict())
