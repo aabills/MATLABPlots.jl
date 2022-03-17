@@ -31,7 +31,7 @@ function semilogx(x,y;options=Dict())
     MATLAB.@mput x
     MATLAB.@mput y
     optionsString = namevaluepairs(options)
-    MATLAB.eval_string("semilogx(x,y"*",\"$lineSpec\""*optionsString*")")
+    MATLAB.eval_string("semilogx(x,y"*optionsString*")")
 end
 
 function semilogx(x,y,lineSpec::String;options=Dict())
@@ -52,7 +52,7 @@ function semilogy(x,y;options=Dict())
     MATLAB.@mput x
     MATLAB.@mput y
     optionsString = namevaluepairs(options)
-    MATLAB.eval_string("semilogy(x,y"*",\"$lineSpec\""*optionsString*")")
+    MATLAB.eval_string("semilogy(x,y"*optionsString*")")
 end
 
 function semilogy(x,y,lineSpec::String;options=Dict())
@@ -73,7 +73,7 @@ function loglog(x,y;options=Dict())
     MATLAB.@mput x
     MATLAB.@mput y
     optionsString = namevaluepairs(options)
-    MATLAB.eval_string("loglog(x,y"*",\"$lineSpec\""*optionsString*")")
+    MATLAB.eval_string("loglog(x,y"*optionsString*")")
 end
 
 function loglog(x,y,lineSpec::String;options=Dict())
@@ -94,7 +94,7 @@ function stairs(x,y;options=Dict())
     MATLAB.@mput x
     MATLAB.@mput y
     optionsString = namevaluepairs(options)
-    MATLAB.eval_string("stairs(x,y"*",\"$lineSpec\""*optionsString*")")
+    MATLAB.eval_string("stairs(x,y"*optionsString*")")
 end
 
 function stairs(x,y,lineSpec::String;options=Dict())
