@@ -62,3 +62,23 @@ function colormap(map)
     MATLAB.@mput map
     MATLAB.eval_string("colormap($map)")
 end
+
+function xticklabels(labels)
+    MATLAB.@mput labels
+    MATLAB.eval_string("xticklabels($labels)")
+end
+
+function yticklabels(labels)
+    MATLAB.@mput labels
+    MATLAB.eval_string("yticklabels($labels)")
+end
+
+function xticks(ticks)
+    MATLAB.@mput ticks
+    MATLAB.eval_string("xticks($ticks)")
+end
+
+function yticks(ticks)
+    MATLAB.@mput ticks
+    MATLAB.eval_string("yticks($ticks)")
+end
