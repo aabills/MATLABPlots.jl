@@ -82,3 +82,13 @@ function yticks(ticks)
     MATLAB.@mput ticks
     MATLAB.eval_string("yticks($ticks)")
 end
+
+function xtickangle(angle)
+    MATLAB.@mput angle
+    MATLAB.eval_string("xtickangle($angle)")
+end
+
+function ytickangle(angle)
+    MATLAB.@mput angle
+    MATLAB.eval_string("ytickangle($angle)")
+end
