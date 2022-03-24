@@ -57,3 +57,8 @@ function axes(n;options=Dict())
     optionString = namevaluepairs(options)
     MATLAB.eval_string("axes($n,$optionString)")
 end
+
+function colormap(map)
+    MATLAB.@mput map
+    MATLAB.eval_string("colormap($map)")
+end

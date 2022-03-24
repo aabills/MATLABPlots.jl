@@ -89,3 +89,18 @@ function contour(X,Y,Z,lineSpec;options=Dict())
     MATLAB.eval_string(plotString)
 end
 
+function pcolor(C;options=Dict())
+    MATLAB.@mput C
+    optionsString = namevaluepairs(options)
+    plotString = "pcolor(C"*optionsString*")"
+    MATLAB.eval_string(plotString)
+end
+
+function pcolor(X,Y,C;options=Dict())
+    MATLAB.@mput X
+    MATLAB.@mput Y
+    MATLAB.@mput C
+    optionsString = namevaluepairs(options)
+    plotString = "pcolor(X,Y,C"*optionsString*")"
+    MATLAB.eval_string(plotString)
+end

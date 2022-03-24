@@ -33,7 +33,7 @@ include("timeseries.jl")
 
 #(3D) Plotting
 include("3DMatlabPlots.jl")
-export plot3,surf,contourf,contour,surface
+export plot3,surf,contourf,contour,surface,pcolor
 
 #(Statistical) Plotting
 include("StatisticalMatlabPlotting.jl")
@@ -45,7 +45,7 @@ export geoplot
 
 #Legends, Axis Labels, GCA
 include("Style.jl")
-export xlabel,ylabel,zlabel,title,legend,setgca,setgcf,printgcf,xlim,ylim,axes
+export xlabel,ylabel,zlabel,title,legend,setgca,setgcf,printgcf,xlim,ylim,axes,colormap
 
 
 # Saving Plots
