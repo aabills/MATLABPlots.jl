@@ -115,3 +115,11 @@ function text(x,y,str;options=Dict())
     optionString = namevaluepairs(options)
     MATLAB.eval_string("text($x,$y,$str $optionString)")
 end
+
+function legend_box_off()
+    MATLAB.eval_string("legend boxoff")
+end
+
+function legend_box_on()
+    MATLAB.eval_string("legend boxon")
+end

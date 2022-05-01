@@ -45,7 +45,7 @@ export geoplot
 
 #Legends, Axis Labels, GCA
 include("Style.jl")
-export xlabel,ylabel,zlabel,title,legend,setgca,setgcf,printgcf,xlim,ylim,axes,colormap,xticks,yticks,xticklabels,yticklabels,xtickangle,ytickangle,box_off,box_on,text
+export xlabel,ylabel,zlabel,title,legend,setgca,setgcf,printgcf,xlim,ylim,axes,colormap,xticks,yticks,xticklabels,yticklabels,xtickangle,ytickangle,box_off,box_on,text,legend_box_off,legend_box_on
 
 
 # Saving Plots
