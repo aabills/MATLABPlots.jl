@@ -92,3 +92,26 @@ function ytickangle(angle)
     MATLAB.@mput angle
     MATLAB.eval_string("ytickangle($angle)")
 end
+
+function box_on()
+    MATLAB.eval_string("box on")
+end
+
+function box_off()
+    MATLAB.eval_string("box off")
+end
+
+function text(x,y,str)
+    MATLAB.@mput x
+    MATLAB.@mput y
+    MATLAB.@mput str
+    MATLAB.eval_string("text($x,$y,$str)")
+end
+
+function text(x,y,str;options=Dict())
+    MATLAB.@mput x
+    MATLAB.@mput y
+    MATLAB.@mput str
+    optionString = namevaluepairs(options)
+    MATLAB.eval_string("text($x,$y,$str $optionString)")
+end
