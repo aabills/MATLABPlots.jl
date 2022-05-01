@@ -19,6 +19,39 @@ function plot(x::Array{T},y,lineSpec::String;options=Dict()) where T<:Number
     MATLAB.eval_string("plot(x,y"*",\"$lineSpec\""*optionsString*")")
 end
 
+#https://www.mathworks.com/help/matlab/ref/scatter.html
+function scatter(x::Array{T},y;options=Dict()) where T<:Number
+    MATLAB.@mput x
+    MATLAB.@mput y
+    optionsString = namevaluepairs(options)
+    MATLAB.eval_string("scatter(x,y"*optionsString*")")
+end
+
+function scatter(x::Array{T},y,sz;options=Dict()) where T<:Number
+    MATLAB.@mput x
+    MATLAB.@mput y
+    MATLAB.@mput sz
+    optionsString = namevaluepairs(options)
+    MATLAB.eval_string("scatter(x,y,sz"*optionsString*")")
+end
+
+function scatter(x::Array{T},y,str::String;options=Dict()) where T<:Number
+    MATLAB.@mput x
+    MATLAB.@mput y
+    optionsString = namevaluepairs(options)
+    MATLAB.eval_string("scatter(x,y,$str"*optionsString*")")
+end
+
+function scatter(x::Array{T},y,sz,str::String;options=Dict()) where T<:Number
+    MATLAB.@mput x
+    MATLAB.@mput y
+    MATLAB.@mput sz
+    optionsString = namevaluepairs(options)
+    MATLAB.eval_string("scatter(x,y,sz,$str"*optionsString*")")
+end
+
+
+
 
 #https://www.mathworks.com/help/matlab/ref/semilogx.html
 function semilogx(y;options=Dict())
