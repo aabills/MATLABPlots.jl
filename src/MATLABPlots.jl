@@ -25,7 +25,7 @@ include("utils.jl")
 
 #(1D and 2D) Plotting
 include("2DMatlabPlots.jl")
-export plot,semilogx,loglog,semilogy,stairs
+export plot,semilogx,loglog,semilogy,stairs,scatter
 
 #Timeseries
 using Dates
