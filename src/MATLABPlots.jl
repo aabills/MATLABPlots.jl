@@ -33,7 +33,7 @@ include("timeseries.jl")
 
 #(3D) Plotting
 include("3DMatlabPlots.jl")
-export plot3,surf,contourf,contour,surface,pcolor
+export plot3,surf,contourf,contour,surface,pcolor,heatmap
 
 #(Statistical) Plotting
 include("StatisticalMatlabPlotting.jl")

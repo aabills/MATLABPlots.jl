@@ -104,3 +104,12 @@ function pcolor(X,Y,C;options=Dict())
     plotString = "pcolor(X,Y,C"*optionsString*")"
     MATLAB.eval_string(plotString)
 end
+
+function heatmap(X,Y,Z;options=Dict())
+    MATLAB.@mput X
+    MATLAB.@mput Y
+    MATLAB.@mput Z
+    optionsString = namevaluepairs(options)
+    plotString = "heatmap(X,Y,Z"*optionsString*")"
+    MATLAB.eval_string(plotString)
+end
