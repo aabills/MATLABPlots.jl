@@ -123,3 +123,11 @@ end
 function legend_box_on()
     MATLAB.eval_string("legend boxon")
 end
+
+function colorbar_on()
+    MATLAB.eval_string("colorbar on")
+end
+
+function colorbar_off()
+    MATLAB.eval_string("colorbar off")
+end
