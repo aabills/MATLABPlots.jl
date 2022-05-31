@@ -1,7 +1,7 @@
 name = "MATLABPlots"
 uuid = "3496906c-a3e1-4a4f-8055-83ed9b3a7d55"
 authors = ["Alec Bills <abills@andrew.cmu.edu>"]
-version = "0.1.2"
+version = "0.1.3"
 
 [deps]
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"

@@ -7,7 +7,7 @@ figure(n::Int) = MATLAB.eval_string("figure($n)")
 figure() = MATLAB.eval_string("figure()")
 function figure(options::Dict)
     optionsString = namevaluepairs(options)
-    MATLAB.eval_string("figure("*optionsString*")")
+    MATLAB.eval_string("figure("*optionsString[2:end]*")")
 end
 function hold_on()
     MATLAB.mat"hold on"
