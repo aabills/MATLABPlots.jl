@@ -5,6 +5,10 @@ import MATLAB
 #Basic One Liners
 figure(n::Int) = MATLAB.eval_string("figure($n)")
 figure() = MATLAB.eval_string("figure()")
+function figure(options::Dict)
+    optionsString = namevaluepairs(options)
+    MATLAB.eval_string("figure"*optionsString*")")
+end
 function hold_on()
     MATLAB.mat"hold on"
 end
