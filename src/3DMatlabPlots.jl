@@ -113,3 +113,9 @@ function heatmap(X,Y,Z;options=Dict())
     plotString = "heatmap(X,Y,Z"*optionsString*")"
     MATLAB.eval_string(plotString)
 end
+
+function sphere(N)
+    MATLAB.@mput N
+    matcommand = "sphere($N)"
+    MATLAB.eval_string(matcommand)
+end

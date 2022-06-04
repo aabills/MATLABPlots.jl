@@ -30,3 +30,17 @@ function unroll_kwargs(kwarg_tuple)
     end
     return optionsString
 end
+
+"""
+@help
+
+provides help for MATLABPlots (lowkey, will work for any matlab function). 
+
+    Usage:
+    @help "stringnameofmatlabfunction"
+
+"""
+macro help(str)
+    return :(MATLAB.eval_string("help "*$str);
+    (isdefined(MATLABPlots,Symbol($str)) ? println("Good news! "*$str*"is in MATLABPlots!") : @warn $str*" is not defined in MATLABPlots. Please consult the MATLAB docs, open an issue, or use MATLAB.jl"))
+end

@@ -26,6 +26,7 @@ export figure,clf,hold_on,hold_off,subplot,grid_on
 
 #Utilities for Plotting
 include("utils.jl")
+export @help
 
 #(1D and 2D) Plotting
 include("2DMatlabPlots.jl")
