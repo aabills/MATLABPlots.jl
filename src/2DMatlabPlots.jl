@@ -136,4 +136,17 @@ function stairs(x,y,lineSpec::String;options=Dict())
     optionsString = namevaluepairs(options)
     MATLAB.eval_string("stairs(x,y"*",\"$lineSpec\""*optionsString*")")
 end
+function polar(theta,rho;options=Dict())
+    MATLAB.@mput theta
+    MATLAB.@mput rho
+    optionsString = namevaluepairs(options)
+    MATLAB.eval_string("polar(theta,rho"*optionsString*")")
+end
+
+function polar(theta,rho,linespec::String;options=Dict())
+    MATLAB.@mput theta
+    MATLAB.@mput rho
+    optionsString = namevaluepairs(options)
+    MATLAB.eval_string("polar(theta,rho"*",\"$lineSpec\""*optionsString*")")
+end
 
