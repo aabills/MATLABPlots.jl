@@ -143,7 +143,7 @@ function polar(theta,rho;options=Dict())
     MATLAB.eval_string("polar(theta,rho"*optionsString*")")
 end
 
-function polar(theta,rho,linespec::String;options=Dict())
+function polar(theta,rho,lineSpec::String;options=Dict())
     MATLAB.@mput theta
     MATLAB.@mput rho
     optionsString = namevaluepairs(options)

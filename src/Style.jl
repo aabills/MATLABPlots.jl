@@ -101,13 +101,6 @@ function box_off()
     MATLAB.eval_string("box off")
 end
 
-function text(x,y,str)
-    MATLAB.@mput x
-    MATLAB.@mput y
-    MATLAB.@mput str
-    MATLAB.eval_string("text($x,$y,$str)")
-end
-
 function text(x,y,str;options=Dict())
     MATLAB.@mput x
     MATLAB.@mput y
