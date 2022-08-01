@@ -22,4 +22,12 @@ function area(X,baseline::Real;options=Dict())
     MATLAB.eval_string("area(X,Y$optionString)")
 end
 
+function fill(X,Y::Array,C="b";options=Dict())
+    MATLAB.@mput X
+    MATLAB.@mput Y
+    MATLAB.@mput C
+    optionString = namevaluepairs(options)
+    MATLAB.eval_string("fill(X,Y,C$optionString)")
+end
+
 
