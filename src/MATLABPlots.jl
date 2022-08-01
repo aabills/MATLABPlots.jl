@@ -42,7 +42,7 @@ export plot3,surf,contourf,contour,surface,pcolor,heatmap
 
 #(Statistical) Plotting
 include("StatisticalMatlabPlotting.jl")
-export histogram
+export histogram,area
 
 #Geo Plotting
 include("GeoPlots.jl")
