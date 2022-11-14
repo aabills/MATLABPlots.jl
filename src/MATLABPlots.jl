@@ -56,7 +56,7 @@ export xlabel,ylabel,zlabel,title,legend,setgca,setgcf,printgcf,xlim,ylim,axes,c
 # Saving Plots
 function saveas(filename; formattype="")
     if formattype != ""
-	    MATLAB.eval_string("saveas(gcf,\"$filename\"\"$formattype\")")
+	    MATLAB.eval_string("saveas(gcf,\"$filename\",\"$formattype\")")
     else
         MATLAB.eval_string("saveas(gcf,\"$filename\")")
     end
