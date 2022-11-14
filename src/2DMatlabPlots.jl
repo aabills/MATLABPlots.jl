@@ -35,6 +35,15 @@ function scatter(x::Array{T},y,sz;options=Dict()) where T<:Number
     MATLAB.eval_string("scatter(x,y,sz"*optionsString*")")
 end
 
+function scatter(x::Array{T},y,sz,c;options=Dict()) where T<:Number
+    MATLAB.@mput x
+    MATLAB.@mput y
+    MATLAB.@mput sz
+    MATLAB.@mput c
+    optionsString = namevaluepairs(options)
+    MATLAB.eval_string("scatter(x,y,sz"*optionsString*")")
+end
+
 function scatter(x::Array{T},y,str::String;options=Dict()) where T<:Number
     MATLAB.@mput x
     MATLAB.@mput y
@@ -48,6 +57,15 @@ function scatter(x::Array{T},y,sz,str::String;options=Dict()) where T<:Number
     MATLAB.@mput sz
     optionsString = namevaluepairs(options)
     MATLAB.eval_string("scatter(x,y,sz,\"$str\""*optionsString*")")
+end
+
+function scatter(x::Array{T},y,sz,c,str::String;options=Dict()) where T<:Number
+    MATLAB.@mput x
+    MATLAB.@mput y
+    MATLAB.@mput sz
+    MATLAB.@mput c
+    optionsString = namevaluepairs(options)
+    MATLAB.eval_string("scatter(x,y,sz,c,\"$str\""*optionsString*")")
 end
 
 function scatter(x::Array{T},y,sz,str::String,filled::String;options=Dict()) where T<:Number
