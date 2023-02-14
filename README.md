@@ -1,6 +1,6 @@
 # MATLABPlots.jl
 
-This package plots julia variables in matlab. 
+This package plots Julia variables in matlab. 
 
 
 # Installation
